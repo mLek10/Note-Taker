@@ -23,11 +23,6 @@ app.get('/notes', (req, res) => {
     res.json(notesData);
   });
 
-//   app.get("/api/notes", function(req, res) {
-//     let db = fs.readFileSync("./db/db.json", "utf8");
-//     db = JSON.parse(db);
-//     res.json(db);
-// });
 
   app.post('/notes', (req, res) => {
     const newNote = req.body;
