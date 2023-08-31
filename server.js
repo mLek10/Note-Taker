@@ -1,16 +1,35 @@
 const express = require("express");
-const notes = require("notes");
+const path = require("path");
+const {v4: uuidv4} = require("uuid"); //generate unique ids
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
-//middleware pointing to public folder
+//middleware
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 app.use(express.static("public"));
-app.get('/', (req, res) => res.send('Navigate to /notes'));
+
+//routes
+app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
 
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, 'public/notes.html'))
 );
 
+app.get('/api/notes', (req, res) => {
+    const notesData = JSON.parse(fs.readFileSync(path.join(__dirname, 'db.json')));
+    res.json(notesData);
+  });
+
+  app.post('/api/notes', (req, res) => {
+    const newNote = req.body;
+    newNote.id = uuidv4(); // Generate a unique ID for the new note
+    const notesData = JSON.parse(fs.readFileSync(path.join(__dirname, 'db.json')));
+    notesData.push(newNote);
+    fs.writeFileSync(path.join(__dirname, 'db.json'), JSON.stringify(notesData));
+    res.json(newNote);
+  });
+
 app.listen(PORT, () =>
-  console.log(`Example app listening at http://localhost:${PORT}`)
+  console.log(`App listening at http://localhost:${PORT}`)
 );
