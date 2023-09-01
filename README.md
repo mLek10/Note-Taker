@@ -6,8 +6,8 @@ The Note Taker Application is a simple note-taking tool that allows users to wri
 ## Installation
 
 1. Clone the repository to your local machine:
-   **```bash**
-   **git clone https://github.com/mLek10/note-taker.git**
+  -  **```bash**
+  - **git clone https://github.com/mLek10/note-taker.git**
 
 2. Navigate to the project directory: **cd note-taker**
 
@@ -18,7 +18,7 @@ The Note Taker Application is a simple note-taking tool that allows users to wri
 1. Start the application by running: **npm start**
 2. Open your web browser and visit: http://localhost:3001
 3. You will be presented with a landing page where you can navigate to the notes page.
-4. On the notes page, you can create new notes, view existing notes, and delete notes.
+4. On the notes page, you can create new notes and view existing notes.
 
 ## Features
 - Create and save notes with titles and text.
@@ -26,11 +26,11 @@ The Note Taker Application is a simple note-taking tool that allows users to wri
 - Click on a note to view its contents.
 
 ## Technologies Used
-Node.js
-Express.js
-UUID (for generating unique IDs)
-HTML/CSS
-Bootstrap
-Font Awesome Icons
+- Node.js
+- Express.js
+- UUID (for generating unique IDs)
+- HTML/CSS
+- Bootstrap
+- Font Awesome Icons
 
 [Emily's GitHub](https://github.com/mLek10)
