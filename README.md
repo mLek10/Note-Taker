@@ -1,7 +1,7 @@
 # Note-Taker
 The Note Taker Application is a simple note-taking tool that allows users to write and save notes. The application is built using Express.js on the back end and features both HTML and API routes for note creation, storage, and retrieval. Notes are saved to a JSON file.
 
-[Note-Taker Site](https://stormy-lake-86786-23bb3e962b6b.herokuapp.com/notes)
+[Note-Taker Site](https://mighty-mountain-61858-b50cb420290b.herokuapp.com/)
 
 ## Installation
 
